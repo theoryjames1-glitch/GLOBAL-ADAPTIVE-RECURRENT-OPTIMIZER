@@ -15,7 +15,7 @@ flowchart TD
     W --> U
 
     U --> THETA[θ_{t+1} = θ_t - lr_t * (mom_t * grad_t + wd_t * θ_t)]
-
+```
 ## Overview
 
 This project explores a **theory of recurrent optimization**:
