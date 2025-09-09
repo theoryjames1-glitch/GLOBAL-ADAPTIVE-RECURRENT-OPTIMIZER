@@ -6,15 +6,15 @@ flowchart TD
     A[grad_t] --> B[GRU Cell]
     B --> H[h_t]
 
-    H --> L[lr_t = softplus(W_lr * h_t + b_lr)]
-    H --> M[mom_t = tanh(W_mom * h_t + b_mom)]
-    H --> W[wd_t = softplus(W_wd * h_t + b_wd)]
+    H --> L["lr_t = softplus(W_lr · h_t + b_lr)"]
+    H --> M["mom_t = tanh(W_mom · h_t + b_mom)"]
+    H --> W["wd_t = softplus(W_wd · h_t + b_wd)"]
 
     L --> U[Parameter Update]
     M --> U
     W --> U
 
-    U --> THETA[θ_{t+1} = θ_t - lr_t * (mom_t * grad_t + wd_t * θ_t)]
+    U --> THETA["θ_{t+1} = θ_t - lr_t · (mom_t · grad_t + wd_t · θ_t)"]
 ```
 ## Overview
 
